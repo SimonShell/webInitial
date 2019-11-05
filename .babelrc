@@ -1,0 +1,8 @@
+{
+    //Babel要转换的源码使用了哪些新的语法特性, babel-preset-env,根据目标环境选择不支持的新特性来转译
+    "presets": ["@babel/preset-env"],
+    //告诉babel要使用那些插件，这些插件可以控制如何转换代码。 babel-plugin-transform-runtime 插件,它不会污染全局对象和内置对象的原型，比如说我们需要Promise，我们只需要import Promise from 'babel-runtime/core-js/promise'即可，这样不仅避免污染全局对象，而且可以减少不必要的代码
+    "plugins": [
+        "@babel/plugin-transform-runtime"
+    ]
+}
